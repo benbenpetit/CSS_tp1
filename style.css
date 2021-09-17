@@ -3,6 +3,8 @@
    License: none (public domain)
 */
 
+/* START RESET */
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,31 +22,39 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 }
-
 a {
     text-decoration: none;
     color: inherit;
 }
-
 a:hover {
     color: inherit;
 }
+ol, ul {
+	list-style: none;
+}
+
+/* END RESET */
+
 
 .row {
     margin-left: 0;
     margin-right: 0;
 }
 
+.row-gap-3 {
+    row-gap: 3rem;
+}
+
 .police-bleue {
-    color: rgb(47, 47, 255);
+    color: rgb(48, 74, 156);
+}
+
+.police-rouge {
+    color: rgb(141, 42, 42);
 }
 
 .fond-bleu {
-    background-color: rgb(48, 74, 156);
-}
-
-.row-gap-3 {
-    row-gap: 3rem;
+    background-color: rgb(53, 85, 190);
 }
 
 .fond-rouge {
@@ -55,11 +65,27 @@ a:hover {
     color: rgba(141, 42, 42);
 }
 
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+header {
+    background-image: url("./assets/img/bg-contenu2.png");
+    background-size: contain;
 }
 
-ol, ul {
-	list-style: none;
+/* NAVBAR MENU */
+
+@media screen and (min-width: 992px) {
+    .dropdown-menu[data-bs-popper] {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .nav-item.dropdown {
+        flex: 1 1 0;
+        text-align: center;
+        background-image: url("./assets/img/bkg_menu_demarches.jpg");
+        background-size: contain;
+    }
+
+    [aria-expanded="true"] {
+        text-decoration: underline;
+    }
 }
